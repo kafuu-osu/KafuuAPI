@@ -1,5 +1,10 @@
 # RealistikAPI
 
+```
+go mod init
+go build
+```
+
 This is the source code for the kafuu-osu API! It is based off Ripple's API (https://git.zxq.co/ripple/rippleapi).
 
 ## Modifications made to the API
