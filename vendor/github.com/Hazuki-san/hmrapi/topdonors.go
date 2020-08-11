@@ -1,7 +1,7 @@
 package hmrapi
 
 import (
-	"github.com/RealistikOsu/api/common"
+	"github.com/RealistikOsu/RealistikAPI/common"
 )
 
 type userData struct {
@@ -38,7 +38,7 @@ func TopDonorsGET(md common.MethodData) common.CodeMessager {
 	rows, err := md.DB.Query(lbUserQuery)
 	if err != nil {
 		md.Err(err)
-		return common.SimpleResponse(500, "Uh oh... Seems like Aoba did something bad to API... Please try again! If it's broken... Please tell me in the Discord!")
+		return common.SimpleResponse(500, "Oh god Realistik broke something again didnt he")
 	}
 	for rows.Next() {
 		var u userData

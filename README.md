@@ -1,11 +1,21 @@
-# rippleapi
+# RealistikAPI
 
-This is the source code for Ripple's API.
+This is the source code for the RealistikOsu API! It is based off Ripple's API (https://git.zxq.co/ripple/rippleapi).
 
-- Origin: https://git.zxq.co/ripple/rippleapi
-- Mirror: https://github.com/osuripple/api
+## Modifications made to the API
 
-## Note to fellow developers: this is not how you do it!
+This API has been modified to suit the needs of RealistikOsu! Here you can see some of the modifications made for it.
+
+* Clans (v1)
+* Most played beatmaps
+* Relax profiles and leaderboards
+* Autopilot profiles and leaderboards
+* Followers
+* Everything else autopilot related (including leaderboards)
+
+## This API does not include the Realistik Statistic API which itself is a standalone API for server statistics.
+
+## Here is a note from Ripple about the design flaws of the API.
 
 The API is crammed with terrible design. First of all, it is not RESTful, and as you'll come to learn, designing an API in a RESTful manner is good because it helps to create consistent design (across your API and other APIs). It also quite simplifies many other things:
 
@@ -17,13 +27,3 @@ The API is crammed with terrible design. First of all, it is not RESTful, and as
 * GET merely shows a resource, is cacheable and "idempotent". This helps debugging (repeating the same request twice will yield the same result, unless of course the data changes otherwise), caching (you can answer with Cache-Control headers, which browsers understand).
 
 The not-making-it-RESTful was the biggest sin of the API. In itself, the API was a step into the right direction (it is MUCH better than the official osu! API), but nowhere close to how an API actually is, ideally. If you are building an API, I won't recommend you a book, but instead I will recommend you to see what [GitHub](https://developer.github.com/v3/) does, as they will have probably faced most problems that you have, and provided an answer already. If you're unsure, check other APIs: Discord, Slack, Twitter, Stripe, to name a few.
-
-## Add-on for this API
-
-This API has been added many feature in it and the listed below is the addon for this API!
-
-* Clans
-* Top played beatmaps
-* Relax profile and leaderboard
-* Autopilot profiles and leaderboards
-* Followers

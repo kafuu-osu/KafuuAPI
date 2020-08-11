@@ -3,7 +3,7 @@ package hmrapi
 import (
 	"database/sql"
 	"strconv"
-	"github.com/RealistikOsu/api/common"
+	"github.com/RealistikOsu/RealistikAPI/common"
 )
 
 type userData1 struct {
@@ -42,7 +42,7 @@ func SubsGET(md common.MethodData) common.CodeMessager {
 	myFriendersRaw, err := md.DB.Query("SELECT user1 FROM users_relationships WHERE user2 = ?", md.ID())
 	if err != nil {
 		md.Err(err)
-		return common.SimpleResponse(500, "Uh oh... Seems like Aoba did something bad to API... Please try again! If it's broken... Please tell me in the Discord!")
+		return common.SimpleResponse(500, "Oh god Realistik broke something again didnt he")
 	}
 	defer myFriendersRaw.Close()
 	for myFriendersRaw.Next() {
@@ -85,7 +85,7 @@ WHERE users_relationships.user2=? AND NOT EXISTS (SELECT * FROM users_relationsh
 	results, err := md.DB.Query(myFriendsQuery+common.Paginate(md.Query("p"), md.Query("l"), 100), md.ID(), md.ID())
 	if err != nil {
 		md.Err(err)
-		return common.SimpleResponse(500, "Uh oh... Seems like Aoba did something bad to API... Please try again! If it's broken... Please tell me in the Discord!")
+		return common.SimpleResponse(500, "Oh god Realistik broke something again didnt he")
 	}
 
 	var myFriends []friendData
@@ -112,7 +112,7 @@ WHERE users_relationships.user2=? AND NOT EXISTS (SELECT * FROM users_relationsh
 func SubsCountGetResponse(md common.MethodData) common.CodeMessager {
 	userid, err := strconv.Atoi(md.Query("userid"))
 	if err != nil {
-		return common.SimpleResponse(500, "Uh oh... Seems like Aoba did something bad to API... Please try again! If it's broken... Please tell me in the Discord!")
+		return common.SimpleResponse(500, "Oh god Realistik broke something again didnt he")
 	}
 
 	myFriendsQuery := `
@@ -132,7 +132,7 @@ WHERE users_relationships.user2=? AND NOT EXISTS (SELECT * FROM users_relationsh
 	results, err := md.DB.Query(myFriendsQuery, userid, userid)
 	if err != nil {
 		md.Err(err)
-		return common.SimpleResponse(500, "Uh oh... Seems like Aoba did something bad to API... Please try again! If it's broken... Please tell me in the Discord!")
+		return common.SimpleResponse(500, "Oh god Realistik broke something again didnt he")
 	}
 
 	var count int = 0

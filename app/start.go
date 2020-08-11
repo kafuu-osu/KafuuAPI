@@ -9,11 +9,11 @@ import (
 	"github.com/getsentry/raven-go"
 	"github.com/jmoiron/sqlx"
 	"gopkg.in/redis.v5"
-	"github.com/RealistikOsu/api/app/internals"
-	"github.com/RealistikOsu/api/app/peppy"
-	v1 "github.com/RealistikOsu/api/app/v1"
-	"github.com/RealistikOsu/api/app/websockets"
-	"github.com/RealistikOsu/api/common"
+	"github.com/RealistikOsu/RealistikAPI/app/internals"
+	"github.com/RealistikOsu/RealistikAPI/app/peppy"
+	v1 "github.com/RealistikOsu/RealistikAPI/app/v1"
+	"github.com/RealistikOsu/RealistikAPI/app/websockets"
+	"github.com/RealistikOsu/RealistikAPI/common"
 	
 	//Add-on
 	"github.com/Hazuki-san/hmrapi"

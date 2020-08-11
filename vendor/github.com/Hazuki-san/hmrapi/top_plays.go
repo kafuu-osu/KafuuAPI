@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"gopkg.in/thehowl/go-osuapi.v1"
-	"github.com/RealistikOsu/api/common"
+	"github.com/RealistikOsu/RealistikAPI/common"
 	"zxq.co/x/getrank"
 )
 
@@ -80,7 +80,7 @@ func TopPlaysGET(md common.MethodData) common.CodeMessager {
 	rows, err := md.DB.Query(fmt.Sprintf(topPlaysQuery, mode) + limitQuery)
 	if err != nil {
 		md.Err(err)
-		return common.SimpleResponse(500, "Uh oh... Seems like Aoba did something bad to API... Please try again! If it's broken... Please tell me in the Discord!")
+		return common.SimpleResponse(500, "Oh god Realistik broke something again didnt he")
 	}
 	var scores []MixedBeatmap
 	for rows.Next() {
@@ -106,7 +106,7 @@ func TopPlaysGET(md common.MethodData) common.CodeMessager {
 		)
 		if err != nil {
 			md.Err(err)
-			return common.SimpleResponse(500, "Uh oh... Seems like Aoba did something bad to API... Please try again! If it's broken... Please tell me in the Discord!")
+			return common.SimpleResponse(500, "Oh god Realistik broke something again didnt he")
 		}
 		b.Difficulty = b.Diff2.STD
 		us.Beatmap = b

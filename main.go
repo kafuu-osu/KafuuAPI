@@ -7,9 +7,9 @@ import (
 	"syscall"
 
 	"zxq.co/ripple/agplwarning"
-	"github.com/RealistikOsu/api/app"
-	"github.com/RealistikOsu/api/beatmapget"
-	"github.com/RealistikOsu/api/common"
+	"github.com/RealistikOsu/RealistikAPI/app"
+	"github.com/RealistikOsu/RealistikAPI/beatmapget"
+	"github.com/RealistikOsu/RealistikAPI/common"
 	"zxq.co/ripple/schiavolib"
 	// Golint pls dont break balls
 	_ "github.com/go-sql-driver/mysql"
@@ -31,7 +31,7 @@ func init() {
 var db *sqlx.DB
 
 func main() {
-	err := agplwarning.Warn("ripple", "The RealistikOsu API")
+	err := agplwarning.Warn("ripple", "The RealistikOsu API | test")
 	if err != nil {
 		fmt.Println(err)
 	}
