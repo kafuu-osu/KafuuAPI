@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/jmoiron/sqlx"
-	"github.com/RealistikOsu/RealistikAPI/common"
+	"github.com/kafuu-osu/KafuuAPI/common"
 )
 
 // Achievement represents an achievement in the database.

@@ -6,16 +6,17 @@ import (
 	"strings"
 	"syscall"
 
+	"github.com/kafuu-osu/KafuuAPI/app"
+	"github.com/kafuu-osu/KafuuAPI/beatmapget"
+	"github.com/kafuu-osu/KafuuAPI/common"
 	"zxq.co/ripple/agplwarning"
-	"github.com/RealistikOsu/RealistikAPI/app"
-	"github.com/RealistikOsu/RealistikAPI/beatmapget"
-	"github.com/RealistikOsu/RealistikAPI/common"
-	"zxq.co/ripple/schiavolib"
+
 	// Golint pls dont break balls
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 	"github.com/serenize/snaker"
 	"gopkg.in/thehowl/go-osuapi.v1"
+	schiavo "zxq.co/ripple/schiavolib"
 )
 
 // Version is the git hash of the application. Do not edit. This is
@@ -31,12 +32,12 @@ func init() {
 var db *sqlx.DB
 
 func main() {
-	err := agplwarning.Warn("ripple", "The RealistikOsu API | test")
+	err := agplwarning.Warn("ripple", "The kafuu-osu API | test")
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	fmt.Print("The RealistikOsu API! Because how much more can I break?")
+	fmt.Print("The kafuu-osu API! Because how much more can I break?")
 	if Version != "" {
 		fmt.Print("; git commit hash: ", Version)
 	}

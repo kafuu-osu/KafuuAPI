@@ -3,7 +3,7 @@ package v1
 import (
 	"strings"
 
-	"github.com/RealistikOsu/RealistikAPI/common"
+	"github.com/kafuu-osu/KafuuAPI/common"
 )
 
 // Boilerplate errors

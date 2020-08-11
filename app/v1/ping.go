@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/RealistikOsu/RealistikAPI/common"
+	"github.com/kafuu-osu/KafuuAPI/common"
 )
 
 var rn = rand.New(rand.NewSource(time.Now().UnixNano()))
@@ -26,7 +26,7 @@ var randomSentences = [...]string{
 	"im dry out of ideas please help....",
 	"Please visit c.ussr.pl for more info!",
 	"piano note",
-	"What is your in game (RealistikOsu) username? * dont play it",
+	"What is your in game (kafuu-osu) username? * dont play it",
 	"Imagine HOI4 with RTX",
 	"Tartarus looks like an incest accident with bloodlust and yatagarasu",
 	"i am learning about heart disease on valentines day",

@@ -1,10 +1,10 @@
 # RealistikAPI
 
-This is the source code for the RealistikOsu API! It is based off Ripple's API (https://git.zxq.co/ripple/rippleapi).
+This is the source code for the kafuu-osu API! It is based off Ripple's API (https://git.zxq.co/ripple/rippleapi).
 
 ## Modifications made to the API
 
-This API has been modified to suit the needs of RealistikOsu! Here you can see some of the modifications made for it.
+This API has been modified to suit the needs of kafuu-osu! Here you can see some of the modifications made for it.
 
 * Clans (v1)
 * Most played beatmaps

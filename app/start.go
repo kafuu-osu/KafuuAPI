@@ -8,16 +8,16 @@ import (
 	fhr "github.com/buaazp/fasthttprouter"
 	"github.com/getsentry/raven-go"
 	"github.com/jmoiron/sqlx"
+	"github.com/kafuu-osu/KafuuAPI/app/internals"
+	"github.com/kafuu-osu/KafuuAPI/app/peppy"
+	v1 "github.com/kafuu-osu/KafuuAPI/app/v1"
+	"github.com/kafuu-osu/KafuuAPI/app/websockets"
+	"github.com/kafuu-osu/KafuuAPI/common"
 	"gopkg.in/redis.v5"
-	"github.com/RealistikOsu/RealistikAPI/app/internals"
-	"github.com/RealistikOsu/RealistikAPI/app/peppy"
-	v1 "github.com/RealistikOsu/RealistikAPI/app/v1"
-	"github.com/RealistikOsu/RealistikAPI/app/websockets"
-	"github.com/RealistikOsu/RealistikAPI/common"
-	
+
 	//Add-on
-	"github.com/Hazuki-san/hmrapi"
-	"github.com/denmarkistrash/mitsuha"
+	"github.com/kafuu-osu/KafuuAPI/hmrapi"
+	"github.com/kafuu-osu/KafuuAPI/mitsuha"
 )
 
 var (
@@ -168,7 +168,6 @@ func Start(conf common.Conf, dbO *sqlx.DB) *fhr.Router {
 		r.Method("/api/v1/users/get_activity", hmrapi.LogsGET)
 		r.Method("/api/v1/mitsuha/followers_friends", mitsuha.FollowersGET)
 	}
-
 
 	// Websocket API
 	{

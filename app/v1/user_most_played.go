@@ -1,7 +1,7 @@
 package v1
 
 import (
-	"github.com/RealistikOsu/RealistikAPI/common"
+	"github.com/kafuu-osu/KafuuAPI/common"
 )
 
 type mostPlayedBeatmap struct {
